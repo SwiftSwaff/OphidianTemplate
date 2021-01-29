@@ -1,0 +1,127 @@
+div#flex-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+%common-attributes {
+    position: relative;
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    @extend %common-attributes;
+    position: fixed;
+    width: 100%;
+    min-height: 100px;
+    z-index: 2;
+    background-color: $header_background;
+    color: $primary_light;
+}
+
+div#hero {
+    @extend %common-attributes;
+    order: 2;
+    flex: 0 1 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../resources/images/hero.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    div#hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: "Lato_Regular", sans-serif;
+        
+        h1 {
+            margin: 5px 0;
+            font-size: 2em;
+            color: $primary_light;
+            
+            @include for-tablet-portrait-up {
+                font-size: 2em;
+            }
+
+            @include for-tablet-landscape-up {
+                font-size: 3em;
+            }
+
+            @include for-desktop-up {
+                font-size: 4em;
+            }
+        }
+        
+        p {
+            margin: 5px 0;
+            font-size: 11px;
+            color: $primary_light;
+            
+            @include for-tablet-portrait-up {
+                font-size: 12px;
+            }
+
+            @include for-tablet-landscape-up {
+                font-size: 14px;
+            }
+
+            @include for-desktop-up {
+                font-size: 16px;
+            }
+        }
+        
+        a {
+            font-size: 11px;
+            color: $primary_light;
+            
+            @include for-tablet-portrait-up {
+                font-size: 12px;
+            }
+
+            @include for-tablet-landscape-up {
+                font-size: 14px;
+            }
+
+            @include for-desktop-up {
+                font-size: 16px;
+            }
+        }
+    }
+    
+    @include for-tablet-portrait-up {
+        flex: 0 1 400px;
+    }
+    
+    @include for-tablet-landscape-up {
+        flex: 0 1 600px;
+    }
+    
+    @include for-desktop-up {
+        flex: 0 1 800px;
+    }
+}
+
+main {
+    @extend %common-attributes;
+    order: 3;
+    flex: 1 0 auto;
+    background-color: $section_odd_background;
+    color: $primary-light;
+}
+
+footer {
+    @extend %common-attributes;
+    order: 4;
+    flex: 0 1 100px;
+    background-color: $footer_background;
+    color: $primary-dark;
+}

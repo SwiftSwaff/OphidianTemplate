@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Lato_Light";
+  src: url("../resources/fonts/Lato-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato_Regular";
+  src: url("../resources/fonts/Lato-Regular.ttf") format("truetype");
+}
+.lato_regular_base {
+  font-family: "Lato_Regular";
+  color: #000000;
+}
+
+div#flex-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 100px;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+footer, main, div#hero, header {
+  position: relative;
+  display: block;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  min-height: 100px;
+  z-index: 2;
+  background-color: #050005;
+  color: #F7F7F7;
+}
+
+div#hero {
+  order: 2;
+  flex: 0 1 200px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../resources/images/hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div#hero div#hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Lato_Regular", sans-serif;
+}
+div#hero div#hero-text h1 {
+  margin: 5px 0;
+  font-size: 2em;
+  color: #F7F7F7;
+}
+@media (min-width: 600px) {
+  div#hero div#hero-text h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 900px) {
+  div#hero div#hero-text h1 {
+    font-size: 3em;
+  }
+}
+@media (min-width: 1200px) {
+  div#hero div#hero-text h1 {
+    font-size: 4em;
+  }
+}
+div#hero div#hero-text p {
+  margin: 5px 0;
+  font-size: 11px;
+  color: #F7F7F7;
+}
+@media (min-width: 600px) {
+  div#hero div#hero-text p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 900px) {
+  div#hero div#hero-text p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  div#hero div#hero-text p {
+    font-size: 16px;
+  }
+}
+div#hero div#hero-text a {
+  font-size: 11px;
+  color: #F7F7F7;
+}
+@media (min-width: 600px) {
+  div#hero div#hero-text a {
+    font-size: 12px;
+  }
+}
+@media (min-width: 900px) {
+  div#hero div#hero-text a {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  div#hero div#hero-text a {
+    font-size: 16px;
+  }
+}
+@media (min-width: 600px) {
+  div#hero {
+    flex: 0 1 400px;
+  }
+}
+@media (min-width: 900px) {
+  div#hero {
+    flex: 0 1 600px;
+  }
+}
+@media (min-width: 1200px) {
+  div#hero {
+    flex: 0 1 800px;
+  }
+}
+
+main {
+  order: 3;
+  flex: 1 0 auto;
+  background-color: #1e0032;
+  color: #F7F7F7;
+}
+
+footer {
+  order: 4;
+  flex: 0 1 100px;
+  background-color: #050005;
+  color: #393939;
+}
+
+/*# sourceMappingURL=main.css.map */

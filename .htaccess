@@ -1,0 +1,17 @@
+SetEnv DB_PATH D:/XAMPP/htdocs/OphidianTemplate/db.php
+SetEnv URL_DEPTH 1
+SetEnv APP_ROOT_PATH D:/XAMPP/htdocs/OphidianTemplate
+SetEnv APP_REL_PATH /OphidianTemplate
+SetEnv ADMIN_ROOT_PATH D:/XAMPP/htdocs/OphidianTemplate/admin
+SetEnv ADMIN_REL_PATH /OphidianTemplate/admin
+
+#SetEnv DB_PATH 
+#SetEnv URL_DEPTH 
+#SetEnv APP_ROOT_PATH 
+#SetEnv APP_REL_PATH 
+#SetEnv ADMIN_ROOT_PATH 
+#SetEnv ADMIN_REL_PATH 
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.+) index.php/?p=$1 [QSA,L]
