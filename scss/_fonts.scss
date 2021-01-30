@@ -9,3 +9,17 @@
     font-family: 'Lato_Regular';
     src: url('../resources/fonts/Lato-Regular.ttf') format('truetype');
 }
+$lato_regular : 'Lato_Regular';
+
+// OpenSans Light
+@font-face {
+    font-family: 'OpenSans_Light';
+    src: url('../resources/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+// OpenSans Regular
+@font-face {
+    font-family: 'OpenSans_Regular';
+    src: url('../resources/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+$opensans_regular : 'OpenSans_Regular';

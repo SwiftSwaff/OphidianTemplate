@@ -1,1 +1,1 @@
-<header></header>
+<header><?php require(getenv("APP_ROOT_PATH") . "/common/nav.php"); ?></header>
